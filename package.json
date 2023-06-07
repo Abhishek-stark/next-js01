@@ -1,25 +1,38 @@
 {
-  "name": "nextproject00",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.2.3",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.3",
-    "next": "13.4.3",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2",
-    "typescript": "5.0.4"
-  }
+    "name": "nextproject00",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "start": "next start",
+        "lint": "next lint",
+        "build": "next build",
+        "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
+        "predeploy": "npm run build"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.0",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^5.13.1",
+        "@mui/styled-engine-sc": "^5.12.0",
+        "@react-icons/all-files": "^4.1.0",
+        "@types/node": "20.2.3",
+        "@types/react": "18.2.6",
+        "@types/react-dom": "18.2.4",
+        "autoprefixer": "10.4.14",
+        "eslint": "8.41.0",
+        "eslint-config-next": "13.4.3",
+        "next": "13.4.3",
+        "postcss": "8.4.23",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.8.0",
+        "styled-components": "^5.3.10",
+        "tailwindcss": "3.3.2",
+        "typescript": "5.0.4"
+    },
+    "devDependencies": {
+        "gh-pages": "^5.0.0"
+    }
 }

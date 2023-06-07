@@ -1,113 +1,640 @@
-import Image from 'next/image'
-
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 export default function Home() {
+  const [shrink, setshrink] = useState(false);
+  const menubtn = () => {
+    setshrink(!shrink);
+    console.log("shrinking", shrink);
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="container">
+      <div className="sidebar" id={`${shrink ? "closed" : "open"}`}>
+        <p className="hide">Abhishek</p>
+        <div
+          className="sidebar_container"
+          id={`${shrink ? "closedcontainer" : "opencontainer"}`}
+        >
+          <button className="sidebar_btn" onClick={menubtn}></button>
+          <div className="containers">
+            <Link href="#dealers_sec">
+              <svg className="header_icons">
+                <use xlinkHref="sprite.svg#icon-user" />
+              </svg>
+            </Link>
+            <Link href="#dealers_sec" className="sidebarlink">
+              Dealers
+            </Link>
+          </div>
+          <div className="containers">
+            <Link href="#features_sec">
+              <svg className="header_icons">
+                <use xlinkHref="sprite.svg#icon-open-book" />
+              </svg>
+            </Link>
+            <Link href="#features_sec" className="sidebarlink">
+              Feature
+            </Link>
+          </div>
+          <div className="containers">
+            <Link href="#about_sec">
+              <svg className="header_icons">
+                <use xlinkHref="sprite.svg#icon-book" />
+              </svg>
+            </Link>
+            <Link href="#about_sec" className="sidebarlink">
+              About
+            </Link>
+          </div>
+          <div className="containers">
+            <Link href="#booking_sec">
+              <svg className="header_icons">
+                <use xlinkHref="sprite.svg#icon-home1" />
+              </svg>
+            </Link>
+            <Link href="#booking_sec" className="sidebarlink">
+              Booking
+            </Link>
+          </div>
+          <div className="containers">
+            <Link href="#homes_sec">
+              <svg className="header_icons">
+                <use xlinkHref="sprite.svg#icon-image-inverted" />
+              </svg>
+            </Link>
+            <Link href="#homes_sec" className="sidebarlink">
+              Gallery
+            </Link>
+          </div>
         </div>
       </div>
+      <div className="header" id="dealers_sec">
+        <div className="header_tag">
+          <svg className="header_icon">
+            <use xlinkHref="sprite.svg#icon-chevron-thin-right" />
+          </svg>
+          <svg className="header_icon">
+            <use xlinkHref="sprite.svg#icon-chevron-thin-right" />
+          </svg>
+          <svg className="header_icon">
+            <use xlinkHref="sprite.svg#icon-chevron-thin-right" />
+          </svg>
+          <svg className="header_icon">
+            <use xlinkHref="sprite.svg#icon-chevron-thin-right" />
+          </svg>
+          <h4> Homes</h4>
+        </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <h3>Your own home</h3>
+        <p> The ultimate personal freedom</p>
+        <button>View our properties</button>
+        <div className="header_seeon">Seen On</div>
+        <div className="header_image">
+          <h4>BBC</h4>
+          <h4>Forbes</h4>
+
+          <h4>business Inside</h4>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="section2">
+        <h3 className="dealer_text">Top 3 Dealers</h3>
+        <div className="dealers_imgs">
+          <Image
+            src="/men1.jpg"
+            height={200}
+            width={200}
+            alt="dealerimg"
+            quality={100}
+            className="dealerimg"
+          />
+          <div className="dealer_detail">
+            <h4>Ronin Iki</h4>
+            <p>200 houses sold</p>
+          </div>
+          <Image
+            src="/men2.jpg"
+            height={200}
+            width={200}
+            alt="dealerimg"
+            quality={100}
+            className="dealerimg"
+          />
+          <div className="dealer_detail">
+            <h4>Jr. Alveraj</h4>
+            <p>150 houses sold</p>
+          </div>
+          <Image
+            src="/men3.jpg"
+            height={200}
+            width={200}
+            alt="dealerimg"
+            quality={100}
+            className="dealerimg"
+          />
+          <div className="dealer_detail">
+            <h4>Maclestar</h4>
+            <p>100 houses sold</p>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+      <div className="section3" id="features_sec">
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-sphere" />
+          </svg>
+
+          <h4 className="heading-medium">Choose Around the World</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-trophy" />
+          </svg>
+          <h4 className="heading-medium">Award winning Design</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-map" />
+          </svg>
+          <h4 className="heading-medium">Choose Design</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-lock-open" />
+          </svg>
+          <h4 className="heading-medium">Lock your home</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-key" />
+          </svg>
+          <h4 className="heading-medium">Ket to Home</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+        <div className="features">
+          <svg className="world">
+            <use xlinkHref="sprite.svg#icon-location-pin" />
+          </svg>
+          <h4 className="heading-medium">Choose location</h4>
+          <p className="bodysmall">
+            This is body small text of this feature sections. This is body small
+            text of this feature sections.
+          </p>
+        </div>
+      </div>
+      <div className="story_pictures" id="about_sec">
+        <div className="image1">
+          <Image
+            src="/GoaTour7.jpg"
+            alt="image1"
+            className="image1"
+            width={1000}
+            height={1000}
+            quality={100}
+          />
+        </div>
+        <div className="image2">
+          <Image
+            src="/GoaTour.jpg"
+            alt="image1"
+            className="image2"
+            width={1000}
+            height={1000}
+            quality={100}
+          />
+        </div>
+      </div>
+      <div className="story_content">
+        <h3>Happy Customer</h3>
+
+        <h2>&ldquo; The best decisionn of our lives &rdquo;</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+          reprehenderit aut repellat sit officiis similique! Impedit, quibusdam.
+          Architecto persp.
+        </p>
+        <button className="btn">Find your home</button>
+      </div>
+      <div className="homes" id="booking_sec">
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home1.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>India</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>9 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              325m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$1,234,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home2.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>Israael</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>19 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              125m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$1,640,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home3.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>China</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>23 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              125m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$1,600,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home4.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>Russia</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>3 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              435m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$1,000,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home5.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>Australia</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>9 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              705m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$1,304,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+        <div className="home">
+          <Image
+            className="commonimage"
+            src="/home6.jpg"
+            alt="homeImage"
+            height={900}
+            width={900}
+            quality={100}
+          />
+          <svg className="home_icon  heart_icon">
+            <use xlinkHref="sprite.svg#icon-heart" />
+          </svg>
+          <h4 className="imageName">make it own</h4>
+
+          <div className="home_details flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-location-pin" />
+            </svg>
+            <p>Us</p>
+          </div>
+          <div className="key_icon  flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-user" />
+            </svg>
+            <p>5 rooms</p>
+          </div>
+          <div className="lock_open flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-time-slot" />
+            </svg>
+            <p>
+              225m<sup>2</sup>
+            </p>
+          </div>
+
+          <div className="rocket_icon flexbox">
+            <svg className="home_icon">
+              <use xlinkHref="sprite.svg#icon-key" />
+            </svg>
+
+            <p>$2,200,000</p>
+          </div>
+          <button className="home_btn">Book Now</button>
+        </div>
+      </div>
+      <div className="gallery" id="homes_sec">
+        <figure className="figure1">
+          <Image
+            src="/home13.jpg"
+            alt="imagehome"
+            width={700}
+            height={700}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure2">
+          <Image
+            src="/home8.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+
+        <figure className="figure3">
+          <Image
+            src="/home9.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure4">
+          <Image
+            src="/home10.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure5">
+          <Image
+            src="/home11.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure6">
+          <Image
+            src="/home12.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure7">
+          {" "}
+          <Image
+            src="/home13.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+
+        <figure className="figure8">
+          <Image
+            src="/home15.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+        <figure className="figure9">
+          <Image
+            src="/home16.jpg"
+            alt="imagehome"
+            width={900}
+            height={900}
+            className="galleries"
+            quality={100}
+          />
+        </figure>
+      </div>
+      <div className="footer">
+        <ul className="footerul">
+          <li className="footerli1">
+            <Link href="#" className="footerlink">
+              Comtact-Us
+            </Link>
+          </li>
+          <li className="footerli2">
+            <Link href="#" className="footerlink">
+              Find Your Dream Home
+            </Link>
+          </li>
+          <li className="footerli3">
+            <Link href="#" className="footerlink">
+              Request on Mail
+            </Link>
+          </li>
+          <li className="footerli4">
+            <Link href="#" className="footerlink">
+              Download Plan
+            </Link>
+          </li>
+          <li className="footerli5">
+            <Link href="#" className="footerlink">
+              Submit Property
+            </Link>
+          </li>
+          <li className="footerli6">
+            <Link href="#" className="footerlink">
+              Work with us
+            </Link>
+          </li>
+        </ul>
+        <p className="footerpara">
+          &copy; Copyright 2023 by Abhishek. Feel free to use it on your own
+          purpose. This does not apply if you plan to produce your own course or
+          tutorials based on this project. You can use it in your any project
+          there is not probelm of using it.
+        </p>
+      </div>
+    </div>
+  );
 }
