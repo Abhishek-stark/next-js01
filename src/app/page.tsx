@@ -101,7 +101,7 @@ export default function Home() {
         <h3 className="dealer_text">Top 3 Dealers</h3>
         <div className="dealers_imgs">
           <Image
-            src="./../../public/men1.jpg"
+            src="./men1.jpg"
             height={200}
             width={200}
             alt="dealerimg"
@@ -113,7 +113,7 @@ export default function Home() {
             <p>200 houses sold</p>
           </div>
           <Image
-            src="./../../public/men2.jpg"
+            src="./men2.jpg"
             height={200}
             width={200}
             alt="dealerimg"
@@ -125,7 +125,7 @@ export default function Home() {
             <p>150 houses sold</p>
           </div>
           <Image
-            src="./../../public/men3.jpg"
+            src="./men3.jpg"
             height={200}
             width={200}
             alt="dealerimg"
@@ -204,7 +204,7 @@ export default function Home() {
       <div className="story_pictures" id="about_sec">
         <div className="image1">
           <Image
-            src="./../../public/GoaTour7.jpg"
+            src="./GoaTour7.jpg"
             alt="image1"
             className="image1"
             width={1000}
@@ -214,7 +214,7 @@ export default function Home() {
         </div>
         <div className="image2">
           <Image
-            src="./../../public/GoaTour.jpg"
+            src="./GoaTour.jpg"
             alt="image1"
             className="image2"
             width={1000}
@@ -238,7 +238,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home1.jpg"
+            src="./home1.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -282,7 +282,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home2.jpg"
+            src="./home2.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -326,7 +326,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home3.jpg"
+            src="./home3.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -370,7 +370,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home4.jpg"
+            src="./home4.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -414,7 +414,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home5.jpg"
+            src="./home5.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -458,7 +458,7 @@ export default function Home() {
         <div className="home">
           <Image
             className="commonimage"
-            src="./../../public/home6.jpg"
+            src="./home6.jpg"
             alt="homeImage"
             height={900}
             width={900}
@@ -503,7 +503,7 @@ export default function Home() {
       <div className="gallery" id="homes_sec">
         <figure className="figure1">
           <Image
-            src="./../../public/home13.jpg"
+            src="./home13.jpg"
             alt="imagehome"
             width={700}
             height={700}
@@ -513,7 +513,7 @@ export default function Home() {
         </figure>
         <figure className="figure2">
           <Image
-            src="./../../public/home8.jpg"
+            src="./home8.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -524,7 +524,7 @@ export default function Home() {
 
         <figure className="figure3">
           <Image
-            src="./../../public/home9.jpg"
+            src="./home9.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -534,7 +534,7 @@ export default function Home() {
         </figure>
         <figure className="figure4">
           <Image
-            src="./../../public/home10.jpg"
+            src="./home10.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -544,7 +544,7 @@ export default function Home() {
         </figure>
         <figure className="figure5">
           <Image
-            src="./../../public/home11.jpg"
+            src="./home11.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -554,7 +554,7 @@ export default function Home() {
         </figure>
         <figure className="figure6">
           <Image
-            src="./../../public/home12.jpg"
+            src="./home12.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -565,7 +565,7 @@ export default function Home() {
         <figure className="figure7">
           {" "}
           <Image
-            src="./../../public/home13.jpg"
+            src="./home13.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -576,7 +576,7 @@ export default function Home() {
 
         <figure className="figure8">
           <Image
-            src="./../../public/home15.jpg"
+            src="./home15.jpg"
             alt="imagehome"
             width={900}
             height={900}
@@ -586,7 +586,7 @@ export default function Home() {
         </figure>
         <figure className="figure9">
           <Image
-            src="./../../public/home16.jpg"
+            src="./home16.jpg"
             alt="imagehome"
             width={900}
             height={900}
