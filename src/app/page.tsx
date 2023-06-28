@@ -155,7 +155,7 @@ export default function Home() {
       <div className="story_pictures" id="about_sec">
         <div className="image1">
           <Image
-            src="./GoaTour7.jpg"
+            src="./goatour7.jpg"
             alt="image1"
             className="image1"
             width={1000}
