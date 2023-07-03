@@ -18,52 +18,52 @@ export default function Home() {
         >
           <button className="sidebar_btn" onClick={menubtn}></button>
           <div className="containers">
-          <Link href="/#dealers_sec">
+          <Link href="#dealers_sec" scroll={false}>
               <svg className="header_icons">
                 <use xlinkHref="sprite.svg#icon-user" />
               </svg>
             </Link>
-            <Link href="/#dealers_sec" className="sidebarlink">
+            <Link href="#dealers_sec" className="sidebarlink" scroll={false}>
               Dealers
             </Link>
           </div>
           <div className="containers">
-            <Link href="/#features_sec">
+            <Link href="#features_sec" scroll={false}>
               <svg className="header_icons">
                 <use xlinkHref="sprite.svg#icon-open-book" />
               </svg>
             </Link>
-            <Link href="/#features_sec" className="sidebarlink">
+            <Link href="#features_sec" className="sidebarlink" scroll={false}>
               Feature
             </Link>
           </div>
           <div className="containers">
-            <Link href="/#about_sec">
+            <Link href="#about_sec" scroll={false}>
               <svg className="header_icons">
                 <use xlinkHref="sprite.svg#icon-book" />
               </svg>
             </Link>
-            <Link href="/#about_sec" className="sidebarlink">
+            <Link href="#about_sec" className="sidebarlink">
               About
             </Link>
           </div>
           <div className="containers">
-            <Link href="/#booking_sec">
+            <Link href="#booking_sec" scroll={false}>
               <svg className="header_icons">
                 <use xlinkHref="sprite.svg#icon-home1" />
               </svg>
             </Link>
-            <Link href="/#booking_sec" className="sidebarlink">
+            <Link href="#booking_sec" className="sidebarlink" scroll={false}>
               Booking
             </Link>
           </div>
           <div className="containers">
-            <Link href="/#homes_sec">
+            <Link href="#homes_sec"  scroll={false}>
               <svg className="header_icons">
                 <use xlinkHref="sprite.svg#icon-image-inverted" />
               </svg>
             </Link>
-            <Link href="/#homes_sec" className="sidebarlink">
+            <Link href="#homes_sec" className="sidebarlink" scroll={false}>
               Gallery
             </Link>
           </div>
